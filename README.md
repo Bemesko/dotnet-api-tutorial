@@ -1,3 +1,5 @@
+This project consists mainly of my notes and remarks for a .NET API tutorial that was on my playlist. It was intended to cover the basics and help me create a solid foundational understanding of the principles that dictate how .NET APIs work.
+
 **Link to Tutorial:** https://www.youtube.com/watch?v=87oOF9Ve-KA
 
 ## Running this project
@@ -18,5 +20,16 @@
 - The REST standard itself is poorly understood so it's difficult to create something 100% RESTful
   - From a high level, REST is all about keeping minimal endpoints and the difference in behavior comes from how you interact with them (using a GET vs a POST)
   - Bottom line: Predictability is key
-
-Tutorial checkpoint: 11:28
+- .NET APIs can be Controller-Based or Minimal
+  - Controller
+    - `dotnet new webapi`
+    - Endpoints correspond to controller classes, which live in the `Controllers` directory
+    - More complex, scale better
+    - Great for APIs with lots of controllers
+  - Minimal
+    - `dotnet new web`
+    - Endpoints are in the `Program.cs` file, using commands such as `MapGet`
+    - Scale poorly, simpler
+    - Good for microservices that have 2 or 3 endpoints
+  - From an end user's perspective, both feel identical
+- C# project types reference: https://www.csharpprojects.com
